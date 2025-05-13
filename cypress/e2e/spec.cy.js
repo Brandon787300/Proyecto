@@ -4,10 +4,11 @@ describe('template spec', () => {
   it('passes', () => {
 
     //Usuario
-    const usuario = "random01"
-    const contrasena = "random01"
+    //const usuario = "random01"
+    //const contrasena = "random01"
     cy.visit('https://demoblaze.com/')              //Navegar a la pagina
-    cy.get('a[data-target="#logInModal"]').click()  //
+    cy.get('a[data-target="#logInModal"]').click()  
+    
     
     /*
     LoginMethods.insertUsername("Hola")
