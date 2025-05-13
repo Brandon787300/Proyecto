@@ -2,8 +2,17 @@ import { LoginMethods } from "./pages/login/login.methods"
 
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('https://demoblaze.com/')
-    cy.get('a[data-target="#logInModal"]').click()
+    cy.visit('https://demoblaze.com/')              //Navegar a la pagina
+    cy.get('a[data-target="#logInModal"]').click()  //
+    
+    /*
+    LoginMethods.insertUsername("Hola")
+    LoginMethods.insertPassword("Hola")
+    cy.wait(2000)
+    LoginMethods.clickOnLoginButton()
+    */
+
+    //Todo el code de arriba se resume a un sola linea 
     LoginMethods.login('username', 'password')
     cy.wait(5000)
   })

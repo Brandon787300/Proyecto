@@ -1,13 +1,17 @@
 export class LoginElements{
+
+    //Getter que consiguen los espacios y los botone spara iniciar sesion
     static get textboxes(){
         return{
-            get username(){
-                return cy.get("input#loginusername");
+            get username(){ 
+                return cy.get('input#loginusername');
+                
 
             },
+
             get password(){
-                return cy.get('input#loginpassword');
-            },
+                return cy.get('input#loginpassword')
+            }
         };
     }
 
@@ -19,7 +23,7 @@ export class LoginElements{
 
             get login(){
                 return cy.contains('button', 'Log in');
-            },
+            }
         }
     }
 }
