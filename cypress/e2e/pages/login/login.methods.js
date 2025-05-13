@@ -3,12 +3,12 @@ import { LoginElements } from "./login.elements";
 export class LoginMethods{
     //Llenar el usuario
     static insertUsername(username){
-        LoginElements.textboxes.username.type(username)
+        LoginElements.textboxes.username.invoke('val',username)
     }
 
     //Llenar la contraseña
     static insertPassword(password){
-        LoginElements.textboxes.password.type(password)
+        LoginElements.textboxes.password.invoke('val',password)
     }
 
     //Click en el boton login
