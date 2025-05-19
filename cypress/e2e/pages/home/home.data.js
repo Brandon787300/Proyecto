@@ -1,14 +1,14 @@
 export class HomeData{
     static get phones(){
         return{
-            SamsungGalaxyS6: "Samsung galaxy s6",
-            NokiaLumia1520: "Nokia lumia 1520",
-            Nexus6: "Nexus 6",
-            SamsungGalaxyS7: "Samsung galaxy s7",
-            Iphone6_32gb: "Iphone 6 32gb",
-            SonyXperiaZ5: "Sony xperia z5",
+            samsungGalaxyS6: "Samsung galaxy s6",
+            nokiaLumia1520: "Nokia lumia 1520",
+            nexus6: "Nexus 6",
+            samsungGalaxyS7: "Samsung galaxy s7",
+            iphone6_32gb: "Iphone 6 32gb",
+            sonyXperiaZ5: "Sony xperia z5",
             HTCOneM9: "HTC One M9"
-
+ 
         }
     }
 }

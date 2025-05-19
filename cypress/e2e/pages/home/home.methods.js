@@ -13,7 +13,7 @@ export class HomeMethods{
     static clickOnMonitorsOption(){
         HomeElements.categoriesMenu.monitors.click();
     }
-
+    
     static clickProductLink(productName){
         HomeElements.product(productName).click();
     }
