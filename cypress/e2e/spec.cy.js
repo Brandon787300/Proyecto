@@ -9,10 +9,10 @@ describe('template spec', () => {
     const usuario = "random01"
     const contrasena = "random01"
     cy.visit('https://demoblaze.com/')  
-    cy.wait(30000)
+    cy.wait(2000)
 
     CartMethods.clickOnDeleteLink('Nokia lumia 1520')
-    cy.wait(30000)
+    cy.wait(20000)
 
     /*
     cy.get('a[data-target="#logInModal"]').click()            //Navegar a la pagina
