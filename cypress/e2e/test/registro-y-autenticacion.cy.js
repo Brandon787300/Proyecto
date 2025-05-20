@@ -3,6 +3,10 @@ import { CommonPageMethods } from "../pages/common-page/common-page.methods";
 import { SignupMethods } from "../pages/singup/signup.methods";
 import { Logger } from "../util/logger";
 
+//Generar usuario y pass aleatorios 
+const user = CommonPageMethods.generateRandomString();
+const pass = CommonPageMethods.generateRandomString(7);
+
 describe(CommonPageData.testSuites.regsitroYAutenticacion, ()=>{
     it('Registro de usuario válido', ()=>{
 
@@ -18,8 +22,8 @@ describe(CommonPageData.testSuites.regsitroYAutenticacion, ()=>{
         //-----------------------------------------
         Logger.stepNumber(3)
         Logger.step('Hacer click en "Sign up" en la barra de navegación')
-        SignupMethods.insertUsername("qwerty")
-        SignupMethods.insertPassword("qwerty")
+        SignupMethods.insertUsername(user)
+        SignupMethods.insertPassword(pass)
 
         //-----------------------------------------
         Logger.stepNumber(4)
