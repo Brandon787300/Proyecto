@@ -1,6 +1,7 @@
 import { CartMethods } from "./pages/cart/cart.methods"
 import { HomeMethods } from "./pages/home/home.methods"
 import { LoginMethods } from "./pages/login/login.methods"
+import { Logger } from "./util/logger"
 
 describe('template spec', () => {
   it('passes', () => {
@@ -8,23 +9,24 @@ describe('template spec', () => {
     //Usuario
     const usuario = "random01"
     const contrasena = "random01"
+
+    //----------------------------------------
+    Logger.stepNumber(1)
+    Logger.step('Navigate to Demoblaze page')
     cy.visit('https://demoblaze.com/')  
-    cy.wait(2000)
 
-    CartMethods.clickOnDeleteLink('Nokia lumia 1520')
-    cy.wait(20000)
+    //----------------------------------------
+    Logger.stepNumber(2)
+    Logger.step('Click on "Login" link ')
+    cy.get('a[data-target="#logInModal"]').click()
 
-    /*
-    cy.get('a[data-target="#logInModal"]').click()            //Navegar a la pagina
+    //----------------------------------------
+    Logger.stepNumber(3)
+    Logger.step(`Login with this credentials: "${usuario}/${contrasena}"`)
     LoginMethods.login(usuario, contrasena)
+    Logger.verification(`The home should show "Welcome  ${usuario}" text`)
     cy.get('a#nameofuser').should('contain.text', usuario)
-    */
-    /*
-    CartMethods.clickOnDeleteLink('Nokia lumia 1520')
-    cy.wait(30000)
-    */
-    
    
-    
+
   })
 })
