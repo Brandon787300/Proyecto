@@ -23,4 +23,8 @@ export class SignupMethods{
     static verifySignupSuccesfulMessageDisplayed(){
         CommonPageMethods.verifyAlert("Sign up successful.")
     }
+
+    static verifyThatThisUserAlreadyExistMessageIsDsiplayed(){
+        CommonPageMethods.verifyAlert("This user already exist.")
+    }
 }

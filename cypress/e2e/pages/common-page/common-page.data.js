@@ -1,12 +1,13 @@
 export class CommonPageData{
-    
+
     static get url(){
         return 'https://demoblaze.com/';
     }
 
     static get testSuites(){
         return{
-            regsitroYAutenticacion: "Registro y Autenticación",
+            registro: "Registro",
+            autenticaicon: "Autenticación",
             catalogoYCompra: "Catálogo y compras",
         };
     }
