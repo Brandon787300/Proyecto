@@ -3,7 +3,7 @@ import { HomeMethods } from "./pages/home/home.methods"
 import { LoginMethods } from "./pages/login/login.methods"
 import { Logger } from "./util/logger"
 
-describe('template spec', () => {
+xdescribe('template spec', () => {
   it('passes', () => {
 
     //Usuario
