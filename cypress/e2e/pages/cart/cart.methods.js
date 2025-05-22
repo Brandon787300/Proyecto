@@ -10,4 +10,13 @@ export class CartMethods{
     static verifyProductAdded(productName){
         CartElements.links.delete(productName).should('be.visible')
     }
+
+    //Verificar que la seccion de Cart se muestre verificando la url
+    static verifyCartPageIsShow(){
+        cy.url().should('include','cart.html')
+    }
+
+    static clickOnPlaceOrderButton(){
+        CartElements.buttons.placeOrder.click();
+    }
 }

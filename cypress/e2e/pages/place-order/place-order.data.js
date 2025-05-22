@@ -6,7 +6,7 @@ export class placeOrderData{
             city: 'Boston',
             creditCardNumber: '5555 5555 5555 4444',
             month: '12',
-            year: '20204' 
+            year: '2024' 
         }
     }
 }

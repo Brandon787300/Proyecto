@@ -17,11 +17,11 @@ export class PlaceOrderMethods{
         PlaceOrderElements.textboxes.creditCard.invoke("val", creditCardNumber);
     }
 
-    static insertName(month){
+    static insertMonth(month){
         PlaceOrderElements.textboxes.month.invoke("val", month);
     }
 
-    static insertName(year){
+    static insertYear(year){
         PlaceOrderElements.textboxes.year.invoke("val", year);
     }
 
@@ -32,6 +32,16 @@ export class PlaceOrderMethods{
 
     static clickPurchaseButton(){
         PlaceOrderElements.buttons.purchase.click();
+    }
+
+    static insertOrderInformation(data){
+        this.insertName(data.name)
+        this.insertCountry(data.country)
+        this.insertCity(data.city)
+        this.insertCreditCard(data.creditCard)
+        this.insertMonth(data.month)
+        this.insertYear(data.year)
+        
     }
 
 
