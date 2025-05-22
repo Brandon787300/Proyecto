@@ -27,5 +27,27 @@ describe(CommonPageData.testSuites.autenticaicon, ()=>{
 
     })
 
+    it('Inicio de sesion inválido', ()=>{
+        Logger.stepNumber(1)
+        Logger.step("Navegar a la página de inicio")
+        CommonPageMethods.navigateToDemoBlaze();
+
+        Logger.stepNumber(2)
+        Logger.step('Hacer clic en "Log in" en la barra de navegación')
+        CommonPageMethods.clickLoginOption();
+
+        Logger.stepNumber(3)
+        Logger.step('Ingresar un nombre de usuario y contraseña invalidos')
+        LoginMethods.insertUsername(LoginData.validCredentials.username)
+        LoginMethods.insertPassword('Contraseña invalida')
+
+        Logger.stepNumber(4)
+        Logger.step('Hacer clic en "Log in" para inicar sesión')
+        LoginMethods.clickOnLoginButton();
+        Logger.verification('Verificar que muestre un mensaje de error indicando que el inicio de sesion ah fallado') 
+        LoginMethods.verifyWronPasswordMessage
+
+    })
+
     
 })
