@@ -10,7 +10,7 @@ export class PlaceOrderElements{
             get city(){
                 return cy.get("input#city");
             },
-            get creditCrad(){
+            get creditCard(){
                 return cy.get("input#card");
             },
             get month(){
