@@ -31,7 +31,7 @@ describe(CommonPageData.testSuites.autenticaicon, ()=>{
         cy.wait(5000)
     })
 
-    xit('Inicio de sesion inválido', ()=>{
+    it('Inicio de sesion inválido', ()=>{
         Logger.stepNumber(1)
         Logger.step("Navegar a la página de inicio")
         CommonPageMethods.navigateToDemoBlaze();
@@ -49,7 +49,7 @@ describe(CommonPageData.testSuites.autenticaicon, ()=>{
         Logger.step('Hacer clic en "Log in" para inicar sesión')
         LoginMethods.clickOnLoginButton();
         Logger.verification('Verificar que muestre un mensaje de error indicando que el inicio de sesion ah fallado') 
-        CommonPageMethods.verifySignedUser(LoginData.validCredentials.username);
+        LoginMethods.verifyWronPasswordMessage();
 
     })
 

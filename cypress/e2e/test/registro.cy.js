@@ -11,8 +11,7 @@ const pass = CommonPageMethods.generateRandomString(7);
 //Datos de una cuenta existente
 const existingUser = LoginData.validCredentials.username
 
-
-xdescribe(CommonPageData.testSuites.registro, ()=>{
+describe(CommonPageData.testSuites.registro, ()=>{
     it('Registro de usuario válido', ()=>{
 
         Logger.stepNumber(1)

@@ -15,7 +15,8 @@ export class LoginMethods{
 
     //Click en el boton login
     static clickOnLoginButton(){
-        LoginElements.buttons.login.click()
+        
+        LoginElements.buttons.login.click();
     }
 
     static login(username, password){
@@ -23,7 +24,7 @@ export class LoginMethods{
         this.insertUsername(username)
         Logger.subStep('Insert password')
         this.insertPassword(password)
-        Logger.subStep('Click on Log button')
+        Logger.subStep('Click on Log in button')
         this.clickOnLoginButton()
     }
 
