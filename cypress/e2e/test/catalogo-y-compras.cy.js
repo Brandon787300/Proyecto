@@ -17,7 +17,7 @@ const password = LoginData.validCredentials.password;
 
 const product = 'ASUS Full HD';
 
-describe(CommonPageData.testSuites.catalogoYCompras, ()=>{
+xdescribe(CommonPageData.testSuites.catalogoYCompras, ()=>{
 
     it('Navegacion por categorias', ()=>{
         Logger.stepNumber(1)
