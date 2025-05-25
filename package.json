@@ -3,18 +3,21 @@
   "version": "1.0.0",
   "description": "Primer proyecto de testing con Cypress",
   "main": "index.js",
- "scripts": {
-  "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
-  "ejecutar-pruebas": "npx cypress run --headed --env allure=true",
-  "generar-reporte": "npx allure generate allure-results -o allure-report --clean",
-  "abrir-reporte": "npx allure open",
-  "test": "npm run limpiar-reporte && (npm run ejecutar-pruebas || true)  && npm run generar-reporte && npm run abrir-reporte"
-},
+  "scripts": {
+    "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
+    "ejecutar-pruebas": "npx cypress run --headed --env allure=true",
+    "generar-reporte": "npx allure generate allure-results -o allure-report --clean",
+    "abrir-reporte": "npx allure open",
+    "test": "npm run limpiar-reporte && (npm run ejecutar-pruebas || true)  && npm run generar-reporte && npm run abrir-reporte",
+    "cy:parallel" : "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e/test && npm run generar-reporte"
+
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^14.3.3",
+    "cypress-parallel": "^0.15.0",
     "rimraf": "^6.0.1"
   },
   "dependencies": {
